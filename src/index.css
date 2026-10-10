@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-italic: 'Instrument Serif', 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Subtle burgundy section heading gradient: near-white at top to rich burgundy at bottom */
+.burgundy-heading-gradient {
+  background: linear-gradient(
+    180deg,
+    #FFFFFF 15%,
+    #FFE4E6 45%,
+    #FB7185 70%,
+    #E11D48 85%,
+    #881337 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Luminous Bold Frosted Glass Title - Clean Neutral White */
+.iphone-reference-title {
+  font-family: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  background: linear-gradient(
+    180deg,
+    #FFFFFF 0%,
+    #FFFFFF 45%,
+    #E4E4E7 80%,
+    #D4D4D8 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.4px rgba(255, 255, 255, 0.95);
+  filter: drop-shadow(0 0 24px rgba(255, 255, 255, 0.45)) drop-shadow(0 0 45px rgba(225, 29, 72, 0.15));
+}
+
+/* Supporting Elegant Italic Serif reference */
+.italic-editorial-serif {
+  font-family: 'Instrument Serif', 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.015em;
+}
+
+/* Floating Glass Feature Card - Neutral Glass / Subtle Dark Tint / Minimal Blur */
+.floating-glass-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.02) 40%,
+    rgba(0, 0, 0, 0.38) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 
+    0 20px 45px -15px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+    0 1px 2px rgba(255, 255, 255, 0.1) inset;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-glass-card:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.03) 40%,
+    rgba(136, 19, 55, 0.22) 100%
+  );
+  border-color: rgba(244, 63, 94, 0.35);
+  box-shadow: 
+    0 25px 55px -12px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(225, 29, 72, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+  transform: translateY(-4px) scale(1.015);
+}
+
+/* Floating Navigation Bar - Neutral Glass / Soft Transparency / Minimal Blur */
+.floating-navbar {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(0, 0, 0, 0.32) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow:
+    0 12px 35px -8px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+    0 1px 2px rgba(255, 255, 255, 0.1) inset;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Premium Glass Button - Neutral Glass with Burgundy Hover Accent */
+.glass-button-dark {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 10px 30px -10px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+    0 1px 2px rgba(255, 255, 255, 0.12) inset;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.glass-button-dark:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.04) 50%,
+    rgba(136, 19, 55, 0.25) 100%
+  );
+  border-color: rgba(244, 63, 94, 0.35);
+  box-shadow: 
+    0 16px 40px -10px rgba(0, 0, 0, 0.7),
+    0 0 25px rgba(225, 29, 72, 0.22),
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+}
+
+/* Asymmetric card float keyframes with subtle organic phase shifts */
+@keyframes floatA {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-7px) rotate(0.4deg); }
+}
+
+@keyframes floatB {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-9px) rotate(-0.5deg); }
+}
+
+@keyframes floatC {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(0.3deg); }
+}
+
+.animate-float-a {
+  animation: floatA 7s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+.animate-float-b {
+  animation: floatB 8.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+.animate-float-c {
+  animation: floatC 6.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+

@@ -1,0 +1,6 @@
+{
+  "name": "iPhone 18 Pro",
+  "description": "Cinematic iPhone 18 Pro hero banner with sophisticated editorial typography, frosted glass aesthetics, and precision industrial design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
